@@ -7,7 +7,7 @@ let app = express();
 let server = Server(app);
 let io = socket(server);
 
-server.listen(80);
+server.listen(process.env.PORT);
 
 app.use(express.static(path.resolve(__dirname, '../client'), { index: 'index.html' }));
 
